@@ -7,7 +7,7 @@ import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
 import { Movie as MovieType } from 'interfaces/Movie'
 
 // import defaultImage from '../assets/no-image.jpg'
-import MovieContext from '../MovieContext'
+import MovieContext from '../contexts/MovieContext'
 
 function Movie({ movie }: { movie: MovieType }) {
   const { addToFavourites, isFav } = useContext(MovieContext)

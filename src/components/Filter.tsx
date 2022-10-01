@@ -5,8 +5,8 @@ import { MdMoreHoriz } from 'react-icons/md'
 
 import { Movie } from 'interfaces/Movie'
 
-import genres from '../genres'
-import MovieContext from '../MovieContext'
+import genres from '../helpers/genres'
+import MovieContext from '../contexts/MovieContext'
 
 const Filter = () => {
   const { setActiveGenre, activeGenre, setFiltered, movies, header } = useContext(MovieContext)

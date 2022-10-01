@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 import Container from './components/Container'
 import Details from './components/Details'
 import Panel from './components/Panel'
-import { MovieProvider } from './MovieContext'
+import { MovieProvider } from './contexts/MovieContext'
 
 import './App.css'
 

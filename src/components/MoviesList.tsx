@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 import Movie from './Movie'
 
-import MovieContext from '../MovieContext'
+import MovieContext from '../contexts/MovieContext'
 
 const MoviesList = () => {
   const { filtered, fetchPopular, header, fetchSearch, searchQuery, searchPage, hasMorePage } = useContext(MovieContext)

@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 
 import { RiSearchLine } from 'react-icons/ri'
 
-import MovieContext from '../MovieContext'
+import MovieContext from '../contexts/MovieContext'
 
 const Search = () => {
   const [value, setValue] = useState('')

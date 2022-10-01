@@ -4,7 +4,7 @@ import _ from 'lodash'
 
 import { Movie } from 'interfaces/Movie'
 
-import { useLocalStorage } from './useLocalStorage'
+import { useLocalStorage } from '../hooks/useLocalStorage'
 
 const ITEMS_PER_PAGE = 20
 

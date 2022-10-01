@@ -5,7 +5,7 @@ import Header from './Header'
 import MoviesList from './MoviesList'
 import Search from './Search'
 
-import MovieContext from '../MovieContext'
+import MovieContext from '../contexts/MovieContext'
 
 const Container = () => {
   const { searchQuery } = useContext(MovieContext)

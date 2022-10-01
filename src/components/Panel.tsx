@@ -6,7 +6,7 @@ import { BsStars } from 'react-icons/bs'
 import { FaUserCircle } from 'react-icons/fa'
 import { MdOutlineMovieFilter } from 'react-icons/md'
 
-import MovieContext from '../MovieContext'
+import MovieContext from '../contexts/MovieContext'
 
 const Panel = () => {
   const { header, fetchPopular, getFavourites, fetchNowPlaying, fetchTopRated, fetchUncoming } =
