@@ -29,8 +29,6 @@ const Details = () => {
     fetchMovie(params?.movieId || '')
   }, [params?.movieId])
 
-  console.log('movie', movie)
-
   return (
     <div>
       <div className="back">

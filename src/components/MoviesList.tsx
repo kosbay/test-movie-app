@@ -17,13 +17,10 @@ const MoviesList = () => {
   }, [header])
 
   const handleFetchSearch = () => {
-    console.log('here')
     if (searchQuery) {
       fetchSearch(searchQuery, searchPage + 1)
     }
   }
-
-  console.log('hasMorePage', hasMorePage)
 
   return (
     <>

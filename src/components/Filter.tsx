@@ -3,10 +3,8 @@ import React, { useContext, useEffect, useState } from 'react'
 import { BiArrowFromRight } from 'react-icons/bi'
 import { MdMoreHoriz } from 'react-icons/md'
 
-import { Movie } from 'interfaces/Movie'
-
-import genres from '../helpers/genres'
 import MovieContext from '../contexts/MovieContext'
+import genres from '../helpers/genres'
 
 const Filter = () => {
   const { setActiveGenre, activeGenre, setFiltered, movies, header } = useContext(MovieContext)

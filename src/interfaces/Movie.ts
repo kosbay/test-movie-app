@@ -18,5 +18,5 @@ export interface Movie {
   }[]
   release_date: string
   homepage: string
-  genre_ids: string[]
+  genre_ids: number[]
 }
