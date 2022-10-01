@@ -9,7 +9,7 @@ import { Movie as MovieType } from 'interfaces/Movie'
 // import defaultImage from '../assets/no-image.jpg'
 import MovieContext from '../contexts/MovieContext'
 
-function Movie({ movie }: { movie: MovieType }) {
+const Movie = ({ movie }: { movie: MovieType }) => {
   const { addToFavourites, isFav } = useContext(MovieContext)
 
   return (

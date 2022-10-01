@@ -54,7 +54,7 @@ const initialState = {
 
 const MovieContext = createContext<MovieContextType>(initialState)
 
-export function MovieProvider({ children }: { children: React.ReactNode }) {
+export const MovieProvider = ({ children }: { children: React.ReactNode }) => {
   const [movies, setMovies] = useState<Movie[]>([])
   const [filtered, setFiltered] = useState<Movie[]>([])
   const [activeGenre, setActiveGenre] = useState<number>(0)

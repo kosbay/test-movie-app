@@ -2,12 +2,17 @@ import { useEffect, useState } from 'react'
 
 import { Movie } from 'interfaces/Movie'
 
-function getStorageValue(key: string, defaultValue: Movie[]) {
+const getStorageValue = (key: string, defaultValue: Movie[]) => {
   // getting stored value
-  const saved: string = localStorage.getItem(key) || ''
+  const saved = localStorage.getItem(key)
+
+  if (!saved) {
+    return defaultValue
+  }
+
   const initial = JSON.parse(saved)
 
-  return initial || defaultValue
+  return initial
 }
 
 export const useLocalStorage = (
