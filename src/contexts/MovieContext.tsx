@@ -7,6 +7,8 @@ import { Movie } from 'interfaces/Movie'
 import { useLocalStorage } from '../hooks/useLocalStorage'
 
 const ITEMS_PER_PAGE = 20
+const API_URL = 'https://api.themoviedb.org/3/'
+const API_KEY = 'b454aa11fb4b5fc5b515d2e80a898a1c'
 
 interface MovieContextType {
   header: string
@@ -73,9 +75,7 @@ export const MovieProvider = ({ children }: { children: React.ReactNode }) => {
   }
 
   const fetchPopular = async () => {
-    const data = await fetch(
-      'https://api.themoviedb.org/3/movie/popular?api_key=b454aa11fb4b5fc5b515d2e80a898a1c&language=en-US&page=1',
-    )
+    const data = await fetch(`${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
     const movies = await data.json()
 
     setMovies(movies.results)
@@ -86,7 +86,7 @@ export const MovieProvider = ({ children }: { children: React.ReactNode }) => {
 
   const fetchSearch = async (query: string, page = 1) => {
     const data = await fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=b454aa11fb4b5fc5b515d2e80a898a1c&language=en-US&query=${query}&page=${page}&include_adult=false`,
+      `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${query}&page=${page}&include_adult=false`,
     )
     const response = await data.json()
 
@@ -111,9 +111,7 @@ export const MovieProvider = ({ children }: { children: React.ReactNode }) => {
   }
 
   const fetchNowPlaying = async () => {
-    const data = await fetch(
-      'https://api.themoviedb.org/3/movie/now_playing?api_key=b454aa11fb4b5fc5b515d2e80a898a1c&language=en-US&page=1',
-    )
+    const data = await fetch(`${API_URL}movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`)
     const movies = await data.json()
 
     setMovies(movies.results)
@@ -123,9 +121,7 @@ export const MovieProvider = ({ children }: { children: React.ReactNode }) => {
   }
 
   const fetchTopRated = async () => {
-    const data = await fetch(
-      'https://api.themoviedb.org/3/movie/top_rated?api_key=b454aa11fb4b5fc5b515d2e80a898a1c&language=en-US&page=1',
-    )
+    const data = await fetch(`${API_URL}movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`)
     const movies = await data.json()
 
     setMovies(movies.results)
@@ -135,9 +131,7 @@ export const MovieProvider = ({ children }: { children: React.ReactNode }) => {
   }
 
   const fetchUncoming = async () => {
-    const data = await fetch(
-      'https://api.themoviedb.org/3/movie/upcoming?api_key=b454aa11fb4b5fc5b515d2e80a898a1c&language=en-US&page=1',
-    )
+    const data = await fetch(`${API_URL}movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`)
     const movies = await data.json()
 
     setMovies(movies.results)

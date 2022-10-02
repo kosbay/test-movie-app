@@ -6,7 +6,6 @@ import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
 
 import { Movie as MovieType } from 'interfaces/Movie'
 
-// import defaultImage from '../assets/no-image.jpg'
 import MovieContext from '../contexts/MovieContext'
 
 const Movie = ({ movie }: { movie: MovieType }) => {
@@ -25,7 +24,7 @@ const Movie = ({ movie }: { movie: MovieType }) => {
       {movie.poster_path !== null ? (
         <img src={'https://image.tmdb.org/t/p/w500' + movie.poster_path} />
       ) : (
-        <img src={undefined} />
+        <img src="no-image.jpg" />
       )}
       <h2>{movie.title}</h2>
     </motion.div>
